@@ -63,8 +63,8 @@ class ViewController: UIViewController {
     func scanBLEDevices(){
         if centralManager?.state.rawValue == 5 {
             self.centralManager?.scanForPeripherals(withServices: nil, options: nil)
-            //stop scanning after 10 seconds
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            //stop scanning after 15 seconds
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15.0) {
                 self.stopScanForBLEDevices()
             }
         } else {
